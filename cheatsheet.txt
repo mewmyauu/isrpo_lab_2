@@ -1,0 +1,84 @@
+проверить, версию git 
+git version
+имя автора коммитов                                
+git config --global user.name "nik"
+почта автора коммитов
+git config --global user.email "pochta"
+показать все настройки      
+git config --list
+создать репозиторий с веткой main  
+git init -b main
+скопировать удалённый репозиторий
+git clone "ssilka"
+состояние файлов
+git status
+добавить файл в индекс (staging)          
+git add "file  
+добавить все изменения                            
+git add .
+сохранить коммит                                   
+git commit -m "сообщение"
+полная история коммитов                   
+git log
+одна строка на коммит
+git log --oneline
+подробности коммита и diff
+git show "hash"
+показать изменения, ещё не в индексе             
+git diff                                    
+список локальных веток - * текущая
+git branch
+все ветки, включая удалённые
+git branch -a                               
+создать ветку без переключения
+git branch "imya"                            
+переключиться на ветку
+git switch "imya"                            
+создать ветку и переключиться
+git switch -c "imya"                        
+вернуться на предыдущую ветку
+git switch -                                
+старый вариант switch -c
+git checkout -b "imya"
+переименовать ветку                       
+git branch -m "old_imya" "new_imya"              
+удалить слитую ветку
+git branch -d "imya"                         
+удалить ветку принудительно
+git branch -D "imya"                         
+слить ветку в текущую
+git merge "imya"
+привязать удалённый репозиторий
+git remote add origin "ssilka"
+проверить привязку              
+git remote -v
+сменить адрес репозитория                               
+git remote set-url origin "ssilka"
+отправить main и запомнить связь          
+git push -u origin main
+отправить новую ветку                     
+git push -u origin feature
+удалить ветку на сервере                  
+git push origin --delete "vetka"
+получить и слить изменения            
+git pull
+обновить список веток с сервера                                    
+git fetch --prune
+
+работа с веткой mainmain and master:
+    git init
+    git switch -c mainmain
+    git remote add origin https://github.com/mewmyauu/isrpo_lab_2.git
+    git add main.py
+    git commit -m "add main.py to mainmain"
+    git push -u origin mainmain
+    git branch -a
+    git switch master
+    git add /img
+    git commit -m "add img"
+    git push -u origin master
+ 
+проблема: забыл, что при git init создается ветка master, а не main
+причина: git init
+Решение: git init -b main или git branch -m master main
+
